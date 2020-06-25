@@ -1,4 +1,4 @@
-<?php 
+<?php
 use ItForFree\SimpleMVC\Config;
 
 $Url = Config::getObject('core.url.class');
@@ -10,8 +10,8 @@ $User = Config::getObject('core.user.class');
 
 <h2><?= $editAdminusersTitle ?>
     <span>
-        <?= $User->returnIfAllowed("admin/adminusers/delete", 
-            "<a href=" . $Url::link("admin/adminusers/delete&id=" . $_GET['id']) 
+        <?= $User->returnIfAllowed("admin/adminusers/delete",
+            "<a href=" . $Url::link("admin/adminusers/delete&id=" . $_GET['id'])
             . ">[Удалить]</a>");?>
     </span>
 </h2>
@@ -23,7 +23,9 @@ $User = Config::getObject('core.user.class');
     <input type="text" name="pass" placeholder="новый пароль" value=""><br>
     <h5>Введите e-mail</h5>
     <input type="text" name="email"  placeholder="email" value="<?= $viewAdminusers->email ?>"><br>
-    
+    <h5>Роль</h5>
+    <input type="text" name="role"  placeholder="role" value="<?= $viewAdminusers->role ?>"><br>
+
     <input type="hidden" name="id" value="<?= $_GET['id']; ?>">
     <input type="submit" name="saveChanges" value="Сохранить">
     <input type="submit" name="cancel" value="Назад">
