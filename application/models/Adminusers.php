@@ -85,7 +85,7 @@ class Adminusers extends BaseExampleModel
 
     /**
     * Обновляем текущий объект статьи в базе данных
-    */
+    */  
     public function update()
     {
 
